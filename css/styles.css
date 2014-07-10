@@ -209,16 +209,21 @@ h2 {
     display: block;
     font-family: "pictonic";
     font-size: 1.7em;
+    transition: all .4s;
+      -webkit-transition: all .4s;
+      -moz-transition: all .4s;
+      -ms-transition: all .4s;
+      -o-transition: all .4s;
 }
 .social li {
     display: inline-block;
     padding-left: .6em;
 }
 .social li:hover a  {
-    -webkit-transform: scale(1.8, 1.8);
-    -moz-transform: scale(1.8, 1.8);
-    -ms-transform: scale(1.8, 1.8);
     transform: scale(1.8, 1.8);
+      -webkit-transform: scale(1.8, 1.8);
+      -moz-transform: scale(1.8, 1.8);
+      -ms-transform: scale(1.8, 1.8);
 }
 .social .icon-rus-vk-02:before { content:""; }
 .social .icon-twitter-1:before { content:""; }
@@ -561,7 +566,7 @@ content: "\e035";
     max-width: 38em;
     overflow: hidden;
     list-style-type: none!important;
-    margin-left: 0!important;
+    margin-left: .3em!important;
 }
 .ubaplayer-controls li {
     display:inline-block;
