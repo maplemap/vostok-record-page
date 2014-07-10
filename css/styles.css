@@ -103,8 +103,8 @@ table {
 /*----------------------------------------------------------------------------------*/
 a {
     color: #fff;
-    transition: all 0.4s;
-    -webkit-transition: all 0.4s;
+    transition: color 0.4s;
+      -webkit-transition: color 0.4s;
 }
 a:hover {
     color: #E00000;
@@ -313,6 +313,7 @@ h2 {
 /*----------------------------------------CONTENT-----------------------------------*/
 /*----------------------------------------------------------------------------------*/
 #about,
+#contacts,
 #content {
     width: 90%;
     font-size: 1.15em;
@@ -510,6 +511,9 @@ content: "\e035";
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------CONTACTS PAGE--------------------------------*/
 /*----------------------------------------------------------------------------------*/
+#contacts {
+    overflow: hidden;
+}
 .info dt {
     float: left;
     color: #afafaf;
@@ -571,7 +575,6 @@ content: "\e035";
     line-height: 2em;
     overflow: hidden;
     cursor: pointer;
-    transition: none;
     background: url("../img/btn.png") no-repeat 0 7px;
 }
 .ubaplayer-button:hover {
