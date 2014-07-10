@@ -7,11 +7,9 @@
     <meta content="ВостокЗапись - студия звукозаписи" name="description">
     <meta content="запись, сведение, мастеринг, аудиоролики, дикторы" name="keywords">
     <meta content="MapleMap" name="author">
-    <link rel="stylesheet" href="audiojs/audiojs.css" />
     <link rel="stylesheet" href="css/styles.css" />
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="audiojs/audio.min.js"></script>
-    <!--<script src="//api.html5media.info/1.1.8/html5media.min.js"></script>-->
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.ubaplayer.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -49,28 +47,24 @@
     </header>
     <section id="content">
         <article class="article">
+            <header><h2>Рекламные ролики</h2></header>
             <p>
-                Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат Вирджиния,
-                взял одно из самых странных слов в Lorem Ipsum, "consectetur", и занялся его поисками
-                в классической латинской литературе.
+                Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве
+                текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает,
+                как много веб-страниц всё ещё дожидаются своего настоящего рождения.
             </p>
-        <div class="audio_box">
-            <audio preload></audio>
-            <ol class="playlist">
-                <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/01-dead-wrong-intro.mp3">dead wrong intro</a></li>
-                <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/02-juicy-r.mp3">juicy-r</a></li>
-                <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/03-its-all-about-the-crystalizabeths.mp3">it's all about the crystalizabeths</a></li>
-                <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/04-islands-is-the-limit.mp3">islands is the limit</a></li>
-                <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/05-one-more-chance-for-a-heart-to-skip-a-beat.mp3">one more chance for a heart to skip a beat</a></li>
-                <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/06-suicidal-fantasy.mp3">suicidal fantasy</a></li>
-                <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/07-everyday-shelter.mp3">everyday shelter</a></li>
-                <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/08-basic-hypnosis.mp3">basic hypnosis</a></li>
-                <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/09-infinite-victory.mp3">infinite victory</a></li>
-                <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/10-the-curious-incident-of-big-poppa-in-the-nighttime.mp3">the curious incident of big poppa in the nighttime</a></li>
-                <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/11-mo-stars-mo-problems.mp3">mo stars mo problems</a></li>
-                <li><a href="#" data-src="media/stilldre.mp3">mo stars mo problems</a></li>
-            </ol>
-        </div>
+            <!--<button class="button"></button>-->
+            <div id="ubaplayer"></div>
+            <ul class="ubaplayer-controls">
+                <li><a href="media/bromgeksin.mp3" class="ubaplayer-button">Ролик 1 - Описание 1</a></li>
+                <li><a href="media/grabli_buglakov.mp3" class="ubaplayer-button">Ролик 2 - Описание 2</a></li>
+                <li><a href="media/hankipanki.mp3" class="ubaplayer-button">Ролик 3 - Описание 3</a></li>
+                <li><a href="media/kentatsu.mp3" class="ubaplayer-button">Ролик 4 - Описание 4</a></li>
+                <li><a href="media/porosyatko.mp3" class="ubaplayer-button">Ролик 5 - Описание 5</a></li>
+                <li><a href="media/semechki_vinnipux.mp3" class="ubaplayer-button">Ролик 6 - Описание 6</a></li>
+                <li><a href="media/zlatogor.mp3" class="ubaplayer-button">Ролик 7 - Описание 7</a></li>
+
+            </ul>
         </article>
     </section>
     <footer class="footer">

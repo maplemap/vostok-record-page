@@ -121,7 +121,28 @@ h2 {
     font-size: 1.9em;
 }
 .active {
-    color: rgba(224, 0, 0, 0.6)
+    color: rgb(224, 0, 0)
+}
+.button {
+    border: 1px solid #9f4c2a;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    height: 30px;
+    line-height: 30px;
+    outline: 0 none;
+    padding: 0 15px;
+    position: relative;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
+    vertical-align: top;
+    background: url("../img/bg-button.png") repeat-x scroll 0 0 #cd503f;
+}
+.button:hover {
+    color: #fff;
+    background-position: 0 100%;
+    background-color: #dc6352;
 }
 .container {
     width: 90%;
@@ -222,6 +243,7 @@ h2 {
     content: "\e600";
 }
 .nav {
+    font-size: 1.1em;
     transition: all .4s;
       -webkit-transition: all .4s;
       -moz-transition: all .4s;
@@ -264,9 +286,10 @@ h2 {
     float: right;
     padding: 0 0 0 1.5em;
 }
+/*End of Hack for IE lt 9*/
 .tiny_nav {
-    font-size: 1.1em;
-    bottom: 2.5em;
+    font-size: 1.3em;
+    bottom: 2em;
     width: 100%;
 }
 .tiny_nav li {
@@ -275,10 +298,10 @@ h2 {
     padding: .2em 0;
     margin-left: .8em;
     transition: all .3s;
-    -webkit-transition: all .3s;
-    -moz-transition: all .3s;
-    -ms-transition: all .3s;
-    -o-transition: all .3s;
+      -webkit-transition: all .3s;
+      -moz-transition: all .3s;
+      -ms-transition: all .3s;
+      -o-transition: all .3s;
 }
 .tiny_nav li:hover {
     transform: translateY(-.2em) scale(1.2, 1.2);
@@ -292,9 +315,7 @@ h2 {
 #about,
 #content {
     width: 90%;
-    /*max-width: 80em;*/
-    overflow: hidden;
-    font-size: 1.1em;
+    font-size: 1.15em;
     line-height: 1.4em;
     margin: 2.0em auto 0 auto;
 }
@@ -324,7 +345,7 @@ h2 {
 }
 .article > p,
 .article > ul {
-    margin: 0 auto 1.5em auto;
+    margin: 1.5em auto;
 }
 .article  > img,
 .article p > img {
@@ -352,7 +373,7 @@ h2 {
     margin: 6em auto 0 auto;
 }
 .footer .copyright {
-    margin-top: .5em;
+    margin-top: 1.5em;
 }
 .footer .design {
     position: absolute;
@@ -395,7 +416,6 @@ h2 {
       -moz-transition: all .5s;
       -ms-transition: all .5s;
       -o-transition: all .5s;
-
 }
 .main_menu p {
     position: absolute;
@@ -485,14 +505,11 @@ content: "\e035";
 /*----------------------------------------ABOUT PAGE--------------------------------*/
 /*----------------------------------------------------------------------------------*/
 .owl-carousel {
-    margin: 1.5em auto 0 auto;
+    margin: 1.5em auto -1em auto;
 }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------CONTACTS PAGE--------------------------------*/
 /*----------------------------------------------------------------------------------*/
-.info {
-    margin: 1em 0 0 0;
-}
 .info dt {
     float: left;
     color: #afafaf;
@@ -514,15 +531,7 @@ content: "\e035";
 .info .skype:before {
     content: '\e801';
 }
-/*.gmap {*/
-    /*height: 30em;*/
-    /*border-radius: .5em;*/
-    /*margin: 1.5em 0;*/
-/*}*/
-/*.map {*/
-    /*float: left;*/
-    /*width: 60%;*/
-/*}*/
+
 .google-maps {
     float: left;
     width: 60%;
@@ -537,6 +546,57 @@ content: "\e035";
     left: 0;
     width: 100% !important;
     height: 100% !important;
+}
+/*----------------------------------------------------------------------------------*/
+/*--------------------------------------UBAPLAYER-----------------------------------*/
+/*----------------------------------------------------------------------------------*/
+#ubaplayer-fallback {
+    display: none;
+}
+.ubaplayer-controls {
+    overflow: hidden;
+    list-style-type: none!important;
+}
+.ubaplayer-controls li {
+    display:inline-block;
+}
+.ubaplayer-button {
+    position: relative;
+    display: block;
+    height: 2em;
+    font-size: .9em;
+    padding: 0 1.5em;
+    line-height: 2em;
+    overflow: hidden;
+    cursor: pointer;
+    transition: none;
+    background: url("../img/btn.png") no-repeat 0 7px;
+}
+.ubaplayer-button:hover {
+    background-position: 0 -33px;
+}
+
+.ubaplayer-button.ubaplayer-playing {
+    background-position: 0 -73px;
+}
+
+.ubaplayer-button.ubaplayer-playing:hover {
+    background-position: 0 -113px;
+}
+
+.ubaplayer-button.ubaplayer-loading:after,
+.ubaplayer-button.ubaplayer-loading:hover:after {
+    content: " ";
+    position: absolute;
+    width: 20px;
+    height: 28px;
+    left: 0;
+    text-indent: 0!important;
+    top: 0;
+    background: url("../img/loading.gif") no-repeat 0 7px;
+}
+#ubaplayer {
+    display: none;
 }
 /*----------------------------------------------------------------------------------*/
 /*----------------------------------mediaQuery's------------------------------------*/
