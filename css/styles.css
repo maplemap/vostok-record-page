@@ -554,8 +554,10 @@ content: "\e035";
     display: none;
 }
 .ubaplayer-controls {
+    max-width: 38em;
     overflow: hidden;
     list-style-type: none!important;
+    margin-left: 0!important;
 }
 .ubaplayer-controls li {
     display:inline-block;
