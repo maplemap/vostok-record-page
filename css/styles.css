@@ -103,8 +103,11 @@ table {
 /*----------------------------------------------------------------------------------*/
 a {
     color: #fff;
-    transition: color 0.4s;
-      -webkit-transition: color 0.4s;
+    transition: color .4s;
+      -webkit-transition: color .4s;
+      -moz-transition: color .4s;
+      -ms-transition: color .4s;
+      -o-transition: color .4s;
 }
 a:hover {
     color: #E00000;
@@ -210,10 +213,10 @@ h2 {
     font-family: "pictonic";
     font-size: 1.7em;
     transition: all .4s;
-      -webkit-transition: all .4s;
-      -moz-transition: all .4s;
-      -ms-transition: all .4s;
-      -o-transition: all .4s;
+    -webkit-transition: all .4s;
+    -moz-transition: all .4s;
+    -ms-transition: all .4s;
+    -o-transition: all .4s;;
 }
 .social li {
     display: inline-block;
@@ -237,7 +240,7 @@ h2 {
     font-family: 'icomoon';
     font-size: 5em;
     cursor: pointer;
-    margin-right: -.18em;
+    margin-right: -.2em;
     transition: all 1.2s;
       -webkit-transition: all 1.2s;
       -moz-transition: all 1.2s;
@@ -269,28 +272,32 @@ h2 {
 }
 .nav_block:hover .icon-arrow {
     color: #ffffff;
+    margin-right: .3em;
 }
 .header .nav {
     float: right;
+    width: 18em;
     margin: .2em -20em 0 0;
     overflow: hidden;
 }
 .header  .nav li {
-    float: left;
-    padding: 0 1.5em;
+    float:left;
+    display: inline;
+    width: 50%;
+    padding: 0;
     margin-bottom: .5em;
 }
 /*Hack for IE lt 9*/
-.header  .nav li:first-child + li + li,
-.header  .nav li:first-child + li + li + li + li {
-    clear: both;
-}
-.header  .nav li:first-child + li,
-.header  .nav li:first-child + li + li +li,
-.header  .nav li:first-child + li + li +li + li + li {
-    float: right;
-    padding: 0 0 0 1.5em;
-}
+/*.header  .nav li:first-child + li + li,*/
+/*.header  .nav li:first-child + li + li + li + li {*/
+    /*clear: both;*/
+/*}*/
+/*.header  .nav li:first-child + li,*/
+/*.header  .nav li:first-child + li + li +li,*/
+/*.header  .nav li:first-child + li + li +li + li + li {*/
+    /*float: right;*/
+    /*padding: 0 0 0 1.5em;*/
+/*}*/
 /*End of Hack for IE lt 9*/
 .tiny_nav {
     font-size: 1.3em;
@@ -425,9 +432,9 @@ h2 {
 }
 .main_menu p {
     position: absolute;
-    left: 10%;
+    left: 5%;
     bottom: 1.7em;
-    width: 80%;
+    width: 90%;
     color: #fff;
     font-size: 1.1em;
     line-height: 1.4em;
