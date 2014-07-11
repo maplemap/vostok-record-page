@@ -351,14 +351,14 @@ h2 {
 /*----------------------------------------------------------------------------------*/
 .article {
     width: 95%;
-    margin: 0 auto;
+    margin: 1.5em auto 0 auto;
 }
 .article header {
     margin-left: -1.5em;
 }
 .article > p,
 .article > ul {
-    margin: 1.5em auto;
+    margin: 1.5em auto 0 auto;
 }
 .article  > img,
 .article p > img {
@@ -573,7 +573,7 @@ content: "\e035";
     max-width: 38em;
     overflow: hidden;
     list-style-type: none!important;
-    margin-left: .3em!important;
+    margin: 1.5em 0 0 .3em!important;
 }
 .ubaplayer-controls li {
     display:inline-block;
