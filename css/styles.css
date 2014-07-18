@@ -787,6 +787,9 @@ content: "\e035";
     }
 }
 @media screen and (max-width: 21.875em) {/*350px*/
+    .article header {
+        margin-left: 0;
+    }
     .main_menu li:hover p {
         opacity: 0;
     }
