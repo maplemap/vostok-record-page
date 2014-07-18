@@ -159,6 +159,7 @@ h2 {
 .container {
     width: 90%;
     max-width: 80em;
+    min-width: 250px;
     overflow: hidden;
     margin: 0 auto;
 }
@@ -269,12 +270,12 @@ h2 {
     font-family: 'icomoon';
     font-size: 5em;
     cursor: pointer;
-    margin-right: -.2em;
-    transition: all 1.2s;
-      -webkit-transition: all 1.2s;
-      -moz-transition: all 1.2s;
-      -ms-transition: all 1.2s;
-      -o-transition: all 1.2s;;
+    margin-right: -.1em;
+    transition: all .8s;
+      -webkit-transition: all .8s;
+      -moz-transition: all .8s;
+      -ms-transition: all .8s;
+      -o-transition: all .8s;;
 }
 .icon-arrow:before {
     content: "\e600";
@@ -301,7 +302,7 @@ h2 {
 }
 .nav_block:hover .icon-arrow {
     color: #ffffff;
-    margin-right: .3em;
+    margin-right: .23em;
 }
 .header .nav {
     float: right;
@@ -329,9 +330,9 @@ h2 {
 /*}*/
 /*End of Hack for IE lt 9*/
 .tiny_nav {
-    font-size: 1.3em;
-    bottom: 2em;
     width: 100%;
+    bottom: 2em;
+    font-size: 1.3em;
 }
 .tiny_nav li {
     float: right;
@@ -349,6 +350,20 @@ h2 {
     -webkit-transform: translateY(-.2em) scale(1.2, 1.2);
     -moz-transform: translateY(-.2em) scale(1.2, 1.2);
     -ms-transform: translateY(-.2em) scale(1.2, 1.2);
+}
+.more {
+    display: inline-block;
+}
+.more:after {
+    content: '▼';
+    display: none;
+    cursor: pointer;
+    color: #E00000;
+    font-size: .7em;
+    margin: -1em 0 0 .4em;
+}
+.more.up:after {
+    content: '▲';
 }
 /*----------------------------------------------------------------------------------*/
 /*----------------------------------------CONTENT-----------------------------------*/
@@ -371,6 +386,11 @@ h2 {
     padding: 0 0 4000px 4.5%;
     margin: 0 0 -4000px;
     border-left: 1px solid #6e6e6e;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
 }
 .aside p {
     margin: 1em 0!important;
@@ -574,6 +594,9 @@ content: "\e035";
 .info .email+dd {
     margin-top: 1em;
 }
+.info .email+dd {
+    display: block;
+}
 .info .skype {
     font-family: 'fontello';
 }
@@ -588,6 +611,11 @@ content: "\e035";
     padding-bottom: 40%;
     height: 0;
     overflow: hidden;
+    transition: all .3s;
+      -webkit-transition: all .3s;
+      -moz-transition: all .3s;
+      -ms-transition: all .3s;
+      -o-transition: all .3s;
 }
 .google-maps iframe {
     position: absolute;
@@ -665,14 +693,54 @@ content: "\e035";
         width: 50%;
     }
 }
+@media screen and (max-width: 60.9375em) {/*975px*/
+    .aside {
+        float: none;
+        border: none;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .google-maps {
+        float: none;
+        width: 90%;
+        padding-bottom: 60%;
+        margin: 0 auto;
+    }
+}
+@media only screen and (min-width : 56.25em) {
+    .header .nav {
+        display: block!important;
+    }
+}
 @media screen and (max-width: 56.25em) {/*900px*/
     .header {
         text-align: center;
     }
+    .header .nav {
+        float: none;
+        width: 100%;
+        display: none;
+        font-size: 1.3em;
+        margin: 0.2em 0 0 0;
+    }
+    .header .nav li {
+        float: none;
+        width: auto;
+        display: inline-block;
+        padding: 0.2em 0.4em;
+    }
     .header .name_page,
     .tiny_nav,
-    .social {
+    .social,
+    .nav_block {
         position: static;
+    }
+    .icon-arrow {
+        display: none;
+    }
+    .more:after {
+        display: inline-block;
     }
     .social,
     .tiny_nav {
@@ -683,9 +751,18 @@ content: "\e035";
         display: inline-block;
         padding: 0.2em .4em;
     }
+    .tiny_nav li:hover {
+        transform: none;
+        -webkit-transform: none;
+        -moz-transform:none;
+        -ms-transform: none;
+    }
 }
 @media screen and (max-width: 48.125em) {/*770px*/
     .container {
+        width: 100%;
+    }
+    .google-maps {
         width: 100%;
     }
 }
