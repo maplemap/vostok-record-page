@@ -42,6 +42,16 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'kr_fabulous_fallregular';
+    src: url('../fonts/kr_fabulous_fall-webfont.eot');
+    src: url('../fonts/kr_fabulous_fall-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/kr_fabulous_fall-webfont.woff') format('woff'),
+    url('../fonts/kr_fabulous_fall-webfont.ttf') format('truetype'),
+    url('../fonts/kr_fabulous_fall-webfont.svg#kr_fabulous_fallregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 /*----------------------------------------------------------------------------------*/
 /*------------------------------RESET DEFAULT STYLES--------------------------------*/
 /*----------------------------------------------------------------------------------*/
@@ -122,7 +132,7 @@ a:hover {
     color: #E00000;
 }
 body {
-    color: #fff;/*#C2C3C3*/
+    color: #fff;
     background: url("../img/bg.jpg") #000 top center repeat-y;
     background-size: 100% auto;
 }
@@ -134,27 +144,6 @@ h2 {
 }
 .active {
     color: rgb(224, 0, 0)
-}
-.button {
-    border: 1px solid #9f4c2a;
-    border-radius: 5px;
-    color: #fff;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 13px;
-    height: 30px;
-    line-height: 30px;
-    outline: 0 none;
-    padding: 0 15px;
-    position: relative;
-    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
-    vertical-align: top;
-    background: url("../img/bg-button.png") repeat-x scroll 0 0 #cd503f;
-}
-.button:hover {
-    color: #fff;
-    background-position: 0 100%;
-    background-color: #dc6352;
 }
 .container {
     width: 90%;
@@ -186,21 +175,21 @@ h2 {
     position: absolute;
     right: 0;
     bottom: 0;
-    transition: all .3s;
       -webkit-transition: all .3s;
       -moz-transition: all .3s;
       -ms-transition: all .3s;
       -o-transition: all .3s;
+    transition: all .3s;
 }
 .logo {
     display: inline-block;
-    max-width: 100%;
+    max-width: 300px;
     position: relative;
+      -webkit-transition: all .3s;
+      -moz-transition: all .3s;
+      -ms-transition: all .3s;
+      -o-transition: all .3s;
     transition: all .3s;
-    -webkit-transition: all .3s;
-    -moz-transition: all .3s;
-    -ms-transition: all .3s;
-    -o-transition: all .3s;
 }
 .logo span {
     display: block;
@@ -213,14 +202,11 @@ h2 {
     text-indent: -4000px;
     overflow: hidden;
     border-radius: 100%;
-    transition: all .3s;
       -webkit-transition: all .3s;
       -moz-transition: all .3s;
       -ms-transition: all .3s;
       -o-transition: all .3s;
-}
-.logo:hover span {
-    background: rgba(224, 0, 0, 1);
+    transition: all .3s;
 }
 .name_page span {
     margin-left: -.35em;
@@ -265,28 +251,28 @@ h2 {
 /*---------------------------------------NAV----------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 .icon-arrow {
-    float: left;
+    float: right;
     color: #E00000;
-    font-family: 'icomoon';
-    font-size: 5em;
+    font-family: 'fontello';
+    font-size:4em;
     cursor: pointer;
-    margin-right: -.1em;
-    transition: all .8s;
-      -webkit-transition: all .8s;
-      -moz-transition: all .8s;
-      -ms-transition: all .8s;
-      -o-transition: all .8s;;
+    /*margin-right: -.1em;*/
+    /*transition: all 2s;*/
+      /*-webkit-transition: all .2s;*/
+      /*-moz-transition: all .2s;*/
+      /*-ms-transition: all .2s;*/
+      /*-o-transition: all .2s;*/
 }
 .icon-arrow:before {
-    content: "\e600";
+    content: "\e802";
 }
 .nav {
     font-size: 1.1em;
-    transition: all .4s;
-      -webkit-transition: all .4s;
-      -moz-transition: all .4s;
-      -ms-transition: all .4s;
-      -o-transition: all .4s;;
+    transition: all .5s;
+      -webkit-transition: all .5s;
+      -moz-transition: all .5s;
+      -ms-transition: all .5s;
+      -o-transition: all .5s;
 }
 .nav li {
     display: inline-block;
@@ -295,20 +281,17 @@ h2 {
 .nav_block {
     top: 6.0em;
     overflow: hidden;
-
-}
-.nav_block:hover .nav {
-    margin: .2em 0 0 0;
-}
-.nav_block:hover .icon-arrow {
-    color: #ffffff;
-    margin-right: .23em;
 }
 .header .nav {
     float: right;
-    width: 18em;
-    margin: .2em -20em 0 0;
+    width: 0;
+    opacity: 0;
+    margin: .2em 0 0 0;
     overflow: hidden;
+}
+.header .nav.active {
+    width: 18em;
+    opacity: 1;
 }
 .header  .nav li {
     float:left;
@@ -352,18 +335,34 @@ h2 {
     -ms-transform: translateY(-.2em) scale(1.2, 1.2);
 }
 .more {
+    position: relative;
     display: inline-block;
 }
-.more:after {
-    content: '▼';
+.more:after,
+.more.up:after {
+    position: absolute;
+    top: -.7em;
+    left: 0;
+    width: 100%;
+    height: 100%;
     display: none;
+    content: "\e802";
+    font-family: fontello;
+    font-size: 1.5em;
     cursor: pointer;
+    margin: 0 0 0 .4em;
+    transition: color .2s;
+      -webkit-transition: color .2s;
+      -moz-transition: color .2s;
+      -ms-transition: color .2s;
+      -o-transition: color .2s;
+}
+.more:after {
     color: #E00000;
-    font-size: .7em;
-    margin: -1em 0 0 .4em;
 }
 .more.up:after {
-    content: '▲';
+    display: block;
+    color: #a60000;
 }
 /*----------------------------------------------------------------------------------*/
 /*----------------------------------------CONTENT-----------------------------------*/
@@ -436,19 +435,14 @@ h2 {
 .footer .copyright {
     margin-top: 1.5em;
 }
-.footer .design {
-    position: absolute;
-    width: 20%;
-    right: 0;
-    /*left: 40%;*/
-    bottom: .4em;
-    font-size: .8em;
+.footer .copyright span {
+    position: relative;
 }
-.footer .design a {
-    color: #fff;
-}
-.footer .design a:hover {
-    text-decoration: underline;
+.author-signature {
+    display: inline-block;
+    font-family: kr_fabulous_fallregular;
+    font-size: 1.5em;
+    margin-left: 1.5%;
 }
 /*----------------------------------------------------------------------------------*/
 /*--------------------------------------MAIN PAGE-----------------------------------*/
@@ -545,7 +539,6 @@ content: "\e035";
       -o-transition: all .5s;
 }
 .main_menu li:hover {
-    /*border-radius: 1.5em;*/
     background: rgba(255, 255, 255, 0.11);
 }
 .main_menu li:hover p {
@@ -668,7 +661,7 @@ content: "\e035";
     left: 0;
     text-indent: 0!important;
     top: 0;
-    background: url("../img/loading.gif") no-repeat 0 7px;
+    /*background: url("../img/loading.gif") no-repeat 0 7px;*/
 }
 #ubaplayer {
     display: none;
@@ -712,17 +705,27 @@ content: "\e035";
     .header .nav {
         display: block!important;
     }
+    .more:after {
+        display: none!important;
+    }
 }
 @media screen and (max-width: 56.25em) {/*900px*/
     .header {
         text-align: center;
     }
-    .header .nav {
+    .header .nav,
+    .header .nav:hover {
         float: none;
         width: 100%;
         display: none;
+        opacity: 1;
         font-size: 1.3em;
         margin: 0.2em 0 0 0;
+          -webkit-transition: none;
+          -moz-transition: none;
+          -ms-transition: none;
+          -o-transition: none;
+        transition: none;
     }
     .header .nav li {
         float: none;
