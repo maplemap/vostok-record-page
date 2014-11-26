@@ -6,9 +6,9 @@
     font-family: 'any-old-icon';
     src:url('../fonts/any-old-icon.eot');
     src:url('../fonts/any-old-icon.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/any-old-icon.woff') format('woff'),
-    url('../fonts/any-old-icon.ttf') format('truetype'),
-    url('../fonts/any-old-icon.svg#any-old-icon') format('svg');
+      url('../fonts/any-old-icon.woff') format('woff'),
+      url('../fonts/any-old-icon.ttf') format('truetype'),
+      url('../fonts/any-old-icon.svg#any-old-icon') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -16,9 +16,9 @@
     font-family: 'icomoon';
     src:url('../fonts/icomoon.eot?4c9si2');
     src:url('../fonts/icomoon.eot?#iefix4c9si2') format('embedded-opentype'),
-    url('../fonts/icomoon.woff?4c9si2') format('woff'),
-    url('../fonts/icomoon.ttf?4c9si2') format('truetype'),
-    url('../fonts/icomoon.svg?4c9si2#icomoon') format('svg');
+      url('../fonts/icomoon.woff?4c9si2') format('woff'),
+      url('../fonts/icomoon.ttf?4c9si2') format('truetype'),
+      url('../fonts/icomoon.svg?4c9si2#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -26,9 +26,9 @@
     font-family: "pictonic";
     src: url('../fonts/pictonic.eot');
     src: url('../fonts/pictonic.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/pictonic.ttf') format('truetype'),
-    url('../fonts/pictonic.woff') format('woff'),
-    url('../fonts/pictonic.svg') format('svg');
+      url('../fonts/pictonic.ttf') format('truetype'),
+      url('../fonts/pictonic.woff') format('woff'),
+      url('../fonts/pictonic.svg') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -36,9 +36,9 @@
     font-family: 'fontello';
     src: url('../fonts/fontello.eot?39123235');
     src: url('../fonts/fontello.eot?39123235#iefix') format('embedded-opentype'),
-    url('../fonts/fontello.woff?39123235') format('woff'),
-    url('../fonts/fontello.ttf?39123235') format('truetype'),
-    url('../fonts/fontello.svg?39123235#email') format('svg');
+      url('../fonts/fontello.woff?39123235') format('woff'),
+      url('../fonts/fontello.ttf?39123235') format('truetype'),
+      url('../fonts/fontello.svg?39123235#email') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -46,9 +46,9 @@
     font-family: 'kr_fabulous_fallregular';
     src: url('../fonts/kr_fabulous_fall-webfont.eot');
     src: url('../fonts/kr_fabulous_fall-webfont.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/kr_fabulous_fall-webfont.woff') format('woff'),
-    url('../fonts/kr_fabulous_fall-webfont.ttf') format('truetype'),
-    url('../fonts/kr_fabulous_fall-webfont.svg#kr_fabulous_fallregular') format('svg');
+      url('../fonts/kr_fabulous_fall-webfont.woff') format('woff'),
+      url('../fonts/kr_fabulous_fall-webfont.ttf') format('truetype'),
+      url('../fonts/kr_fabulous_fall-webfont.svg#kr_fabulous_fallregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -217,32 +217,31 @@ h2 {
     top: 2em;
     right: 0;
     margin: 0 .5%;
-    transition: all 1.2s;
       -webkit-transition: all 1.2s;
       -moz-transition: all 1.2s;
       -ms-transition: all 1.2s;
       -o-transition: all 1.2s;;
-
+    transition: all 1.2s;
 }
 .social a {
     display: block;
     font-family: "pictonic";
     font-size: 1.7em;
+      -webkit-transition: all .4s;
+      -moz-transition: all .4s;
+      -ms-transition: all .4s;
+      -o-transition: all .4s;
     transition: all .4s;
-    -webkit-transition: all .4s;
-    -moz-transition: all .4s;
-    -ms-transition: all .4s;
-    -o-transition: all .4s;;
 }
 .social li {
     display: inline-block;
     padding: .3em;
 }
 .social li:hover a  {
-    transform: scale(1.8, 1.8);
       -webkit-transform: scale(1.8, 1.8);
       -moz-transform: scale(1.8, 1.8);
       -ms-transform: scale(1.8, 1.8);
+    transform: scale(1.8, 1.8);
 }
 .social .icon-rus-vk-02:before { content:""; }
 .social .icon-twitter-1:before { content:""; }
@@ -250,37 +249,15 @@ h2 {
 /*----------------------------------------------------------------------------------*/
 /*---------------------------------------NAV----------------------------------------*/
 /*----------------------------------------------------------------------------------*/
-.icon-arrow {
+.icon-menu {
     float: right;
     color: #E00000;
     font-family: 'fontello';
     font-size:4em;
     cursor: pointer;
-    /*margin-right: -.1em;*/
-    /*transition: all 2s;*/
-      /*-webkit-transition: all .2s;*/
-      /*-moz-transition: all .2s;*/
-      /*-ms-transition: all .2s;*/
-      /*-o-transition: all .2s;*/
 }
-.icon-arrow:before {
+.icon-menu:before {
     content: "\e802";
-}
-.nav {
-    font-size: 1.1em;
-    transition: all .5s;
-      -webkit-transition: all .5s;
-      -moz-transition: all .5s;
-      -ms-transition: all .5s;
-      -o-transition: all .5s;
-}
-.nav li {
-    display: inline-block;
-    padding: .5em;
-}
-.nav_block {
-    top: 6.0em;
-    overflow: hidden;
 }
 .header .nav {
     float: right;
@@ -300,40 +277,6 @@ h2 {
     padding: 0;
     margin-bottom: .5em;
 }
-/*Hack for IE lt 9*/
-/*.header  .nav li:first-child + li + li,*/
-/*.header  .nav li:first-child + li + li + li + li {*/
-    /*clear: both;*/
-/*}*/
-/*.header  .nav li:first-child + li,*/
-/*.header  .nav li:first-child + li + li +li,*/
-/*.header  .nav li:first-child + li + li +li + li + li {*/
-    /*float: right;*/
-    /*padding: 0 0 0 1.5em;*/
-/*}*/
-/*End of Hack for IE lt 9*/
-.tiny_nav {
-    width: 100%;
-    bottom: 2em;
-    font-size: 1.3em;
-}
-.tiny_nav li {
-    float: right;
-    cursor: pointer;
-    padding: .2em 0 .2em .4em;
-    /*margin-left: .8em;*/
-    transition: all .3s;
-      -webkit-transition: all .3s;
-      -moz-transition: all .3s;
-      -ms-transition: all .3s;
-      -o-transition: all .3s;
-}
-.tiny_nav li:hover {
-    transform: translateY(-.2em) scale(1.2, 1.2);
-    -webkit-transform: translateY(-.2em) scale(1.2, 1.2);
-    -moz-transform: translateY(-.2em) scale(1.2, 1.2);
-    -ms-transform: translateY(-.2em) scale(1.2, 1.2);
-}
 .more {
     position: relative;
     display: inline-block;
@@ -351,11 +294,11 @@ h2 {
     font-size: 1.5em;
     cursor: pointer;
     margin: 0 0 0 .4em;
-    transition: color .2s;
       -webkit-transition: color .2s;
       -moz-transition: color .2s;
       -ms-transition: color .2s;
       -o-transition: color .2s;
+    transition: color .2s;
 }
 .more:after {
     color: #E00000;
@@ -363,6 +306,43 @@ h2 {
 .more.up:after {
     display: block;
     color: #a60000;
+}
+.nav {
+    font-size: 1.1em;
+      -webkit-transition: all .5s;
+      -moz-transition: all .5s;
+      -ms-transition: all .5s;
+      -o-transition: all .5s;
+    transition: all .5s;
+}
+.nav li {
+    display: inline-block;
+    padding: .5em;
+}
+.nav_block {
+    top: 6.0em;
+    overflow: hidden;
+}
+.tiny_nav {
+    width: 100%;
+    bottom: 2em;
+    font-size: 1.3em;
+}
+.tiny_nav li {
+    float: right;
+    cursor: pointer;
+    padding: .2em 0 .2em .4em;
+      -webkit-transition: all .3s;
+      -moz-transition: all .3s;
+      -ms-transition: all .3s;
+      -o-transition: all .3s;
+    transition: all .3s;
+}
+.tiny_nav li:hover {
+      -webkit-transform: translateY(-.2em) scale(1.2, 1.2);
+      -moz-transform: translateY(-.2em) scale(1.2, 1.2);
+      -ms-transform: translateY(-.2em) scale(1.2, 1.2);
+    transform: translateY(-.2em) scale(1.2, 1.2);
 }
 /*----------------------------------------------------------------------------------*/
 /*----------------------------------------CONTENT-----------------------------------*/
@@ -385,11 +365,11 @@ h2 {
     padding: 0 0 4000px 4.5%;
     margin: 0 0 -4000px;
     border-left: 1px solid #6e6e6e;
+      -webkit-transition: all .3s;
+      -moz-transition: all .3s;
+      -ms-transition: all .3s;
+      -o-transition: all .3s;
     transition: all .3s;
-    -webkit-transition: all .3s;
-    -moz-transition: all .3s;
-    -ms-transition: all .3s;
-    -o-transition: all .3s;
 }
 .aside p {
     margin: 1em 0!important;
@@ -419,7 +399,6 @@ h2 {
     max-width: 50em;
     margin: 0 auto;
 }
-.article .playlist {}
 /*----------------------------------------------------------------------------------*/
 /*--------------------------------------FOOTER--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
@@ -440,6 +419,7 @@ h2 {
 }
 .author-signature {
     display: inline-block;
+    color: #5f5f5f;
     font-family: kr_fabulous_fallregular;
     font-size: 1.5em;
     margin-left: 1.5%;
@@ -458,11 +438,11 @@ h2 {
     display: block;
     position: relative;
     padding: 4.5em 0;
+      -webkit-transition: all .3s;
+      -moz-transition: all .3s;
+      -ms-transition: all .3s;
+      -o-transition: all .3s;
     transition: all .3s;
-    -webkit-transition: all .3s;
-    -moz-transition: all .3s;
-    -ms-transition: all .3s;
-    -o-transition: all .3s;
 }
 .main_menu h2 {
     font-size: 2.5em;
@@ -471,11 +451,11 @@ h2 {
     float: left;
     width: 33.333333333%;
     text-align: center;
-    transition: all .5s;
       -webkit-transition: all .5s;
       -moz-transition: all .5s;
       -ms-transition: all .5s;
       -o-transition: all .5s;
+    transition: all .5s;
 }
 .main_menu p {
     position: absolute;
@@ -489,15 +469,15 @@ h2 {
       -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
       filter: alpha(opacity=0);
     margin: 0 auto;
-    transform: translateY(2em);
       -webkit-transform: translateY(2em);
       -moz-transform: translateY(2em);
       -ms-transform: translateY(2em);
-    transition: all 0.2s linear;
+    transform: translateY(2em);
       -webkit-transition: all 0.2s linear;
       -moz-transition: all 0.2s linear;
       -ms-transition: all 0.2s linear;
       -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
 }
 .main_menu .icons {
     display: block;
@@ -532,33 +512,33 @@ content: "\e035";
 }
 .main_menu .title {
     font-family: Jura, sans-serif;
-    transition: all .5s;
       -webkit-transition: all .5s;
       -moz-transition: all .5s;
       -ms-transition: all .5s;
       -o-transition: all .5s;
+    transition: all .5s;
 }
 .main_menu li:hover {
     background: rgba(255, 255, 255, 0.11);
 }
 .main_menu li:hover p {
     opacity: 1;
-    transform: translateY(0em);
       -webkit-transform: translateY(0em);
       -moz-transform: translateY(0em);
       -ms-transform: translateY(0em);
+    transform: translateY(0em);
 }
 .main_menu li:hover .icons {
-    transform: translateY(-.3em);
       -webkit-transform: translateY(-.3em);
       -moz-transform: translateY(-.3em);
       -ms-transform: translateY(-.3em);
+    transform: translateY(-.3em);
 }
 .main_menu li:hover .title {
-    transform: translateY(-1.3em);
       -webkit-transform: translateY(-1.3em);
       -moz-transform:translateY(-1.3em);
       -ms-transform: translateY(-1.3em);
+    transform: translateY(-1.3em);
 }
 /*----------------------------------------------------------------------------------*/
 /*----------------------------------------ABOUT PAGE--------------------------------*/
@@ -604,11 +584,11 @@ content: "\e035";
     padding-bottom: 40%;
     height: 0;
     overflow: hidden;
-    transition: all .3s;
       -webkit-transition: all .3s;
       -moz-transition: all .3s;
       -ms-transition: all .3s;
       -o-transition: all .3s;
+    transition: all .3s;
 }
 .google-maps iframe {
     position: absolute;
@@ -676,7 +656,11 @@ content: "\e035";
     overflow: hidden;
     padding-bottom: 33.25%;
     margin: 1.5em auto 0 auto;
-    transition: all 0.5s;
+      -webkit-transition: all .5s;
+      -moz-transition: all .5s;
+      -ms-transition: all .5s;
+      -o-transition: all .5s;
+    transition: all .5s;
 }
 /*----------------------------------------------------------------------------------*/
 /*----------------------------------mediaQuery's------------------------------------*/
@@ -739,7 +723,7 @@ content: "\e035";
     .nav_block {
         position: static;
     }
-    .icon-arrow {
+    .icon-menu {
         display: none;
     }
     .more:after {
@@ -755,10 +739,10 @@ content: "\e035";
         padding: 0.2em .4em;
     }
     .tiny_nav li:hover {
+          -webkit-transform: none;
+          -moz-transform:none;
+          -ms-transform: none;
         transform: none;
-        -webkit-transform: none;
-        -moz-transform:none;
-        -ms-transform: none;
     }
 }
 @media screen and (max-width: 48.125em) {/*770px*/
@@ -798,15 +782,15 @@ content: "\e035";
     }
     .main_menu li:hover .icons,
     .main_menu li:hover .title {
-        transform: none;
           -webkit-transform: none;
           -moz-transform: none;
           -ms-transform: none;
-        transition: none;
+        transform: none;
           -webkit-transition: none;
           -moz-transition: none;
           -ms-transition: none;
           -o-transition: none;
+        transition: none;
     }
 }
 @media screen and (max-width: 17.5em) {/*280px*/

@@ -13,7 +13,7 @@ $(document).ready( function (){
     $('.copyright span')
         .after('<a href="//maplemap.net/" target="_blank" title="Design by MapleMap" class="author-signature">O</a>');
 /********************************** Hide-Show menu ****************************************/
-    $('.icon-arrow').on('click', function(){
+    $('.icon-menu').on('click', function(){
        if(!(parseInt($('.header .nav').css('width')))){
            $('.header .nav').addClass('active');
        } else {
