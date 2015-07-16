@@ -65,7 +65,7 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
+figure, figcaption, footer, header,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
     margin: 0;
@@ -83,7 +83,7 @@ a {
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+footer, header, menu, nav, section {
     display: block;
 }
 body {
@@ -164,13 +164,13 @@ h2 {
 /*----------------------------------------------------------------------------------*/
 /*-----------------------------------------HEADER-----------------------------------*/
 /*----------------------------------------------------------------------------------*/
-.header {
+#header {
     position: relative;
     width: 90.0%;
     padding-top: 2.0em;
     margin: 0 auto .6em auto;
 }
-.header .name_page,
+#header .name_page,
 .tiny_nav {
     position: absolute;
     right: 0;
@@ -259,18 +259,18 @@ h2 {
 .icon-menu:before {
     content: "\e802";
 }
-.header .nav {
+#header .nav {
     float: right;
     width: 0;
     opacity: 0;
     margin: .2em 0 0 0;
     overflow: hidden;
 }
-.header .nav.active {
+#header .nav.active {
     width: 18em;
     opacity: 1;
 }
-.header  .nav li {
+#header  .nav li {
     float:left;
     display: inline;
     width: 50%;
@@ -402,7 +402,7 @@ h2 {
 /*----------------------------------------------------------------------------------*/
 /*--------------------------------------FOOTER--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
-.footer {
+#footer {
     position: relative;
     clear: both;
     width: 100%;
@@ -411,10 +411,10 @@ h2 {
     padding: 1.5em 0;
     margin: 6em auto 0 auto;
 }
-.footer .copyright {
+#footer .copyright {
     margin-top: 1.5em;
 }
-.footer .copyright span {
+#footer .copyright span {
     position: relative;
 }
 .author-signature {
@@ -686,7 +686,7 @@ content: "\e035";
     }
 }
 @media only screen and (min-width : 56.3125em) {/*901px*/
-    .header .nav {
+    #header .nav {
         display: block!important;
     }
     .more:after {
@@ -694,11 +694,11 @@ content: "\e035";
     }
 }
 @media screen and (max-width: 56.25em) {/*900px*/
-    .header {
+    #header {
         text-align: center;
     }
-    .header .nav,
-    .header .nav:hover {
+    #header .nav,
+    #header .nav:hover {
         float: none;
         width: 100%;
         display: none;
@@ -711,13 +711,13 @@ content: "\e035";
           -o-transition: none;
         transition: none;
     }
-    .header .nav li {
+    #header .nav li {
         float: none;
         width: auto;
         display: inline-block;
         padding: 0.2em 0.4em;
     }
-    .header .name_page,
+    #header .name_page,
     .tiny_nav,
     .social,
     .nav_block {
