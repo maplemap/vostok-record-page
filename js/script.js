@@ -14,10 +14,12 @@ $(document).ready( function (){
         .after('<a href="//maplemap.net/" target="_blank" title="Design by MapleMap" class="author-signature">O</a>');
 /********************************** Hide-Show menu ****************************************/
     $('.icon-menu').on('click', function(){
-       if(!(parseInt($('.header .nav').css('width')))){
-           $('.header .nav').addClass('active');
+        var $headerNav =  $('#header').find('.nav');
+
+       if(!(parseInt($headerNav.css('width')))){
+           $headerNav.addClass('active');
        } else {
-           $('.header .nav').removeClass('active');
+           $headerNav.removeClass('active');
        }
     });
 /************************ Hide-Show Menu after width: 56.25em ****************************/
