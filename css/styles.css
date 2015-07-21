@@ -152,6 +152,13 @@ h2 {
     overflow: hidden;
     margin: 0 auto;
 }
+.clearfix:after {
+    content: " "; /* Older browser do not support empty content */
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
 .video iframe,
 .video object,
 .video embed {
