@@ -1,7 +1,11 @@
----
-  main: 
-    pageName: "Студия звукозаписи"
-  about: 
-    pageName: "О нас"
-  contacts: 
-    pageName: "Контакты"
+{
+    "header": {
+        "namePage": "Студия звукозаписи"
+    },
+    "about": {
+        "namePage": "О нас"
+    },
+    "contacts": {
+        "namePage": "Контакты"
+    }
+}
