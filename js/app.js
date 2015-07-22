@@ -52,19 +52,31 @@ var App = (function () {
             }
         },
 
-        CreateTemplate = function (tpl, callback) {
+        Get = {
 
-            template[tpl] = twig({
-                id: tpl,
-                href: config.path.templates + config.views[tpl],
-                async: false,
+            TMPdata: function (callback) {
+                $.get(config.path.templatesData, function(data){
+                    TMPdata = data;
 
-                load: function(template) {
-                    var content = template.render();
+                    callback();
+                });
+            },
 
-                    callback(content);
+            twigContent: function (template, data) {
+                var data = data || TmpData[tmpName],
+                    twigTemplate = twig({ ref: template }),
+                    view = '';
+
+                if( twigTemplate ) {
+                    view = twigTemplate.render(data);
+                } else {
+                    Create.twigTMP(template, data, function(content){
+                        view = content;
+                    });
                 }
-            });
+
+                return view;
+            }
 
         },
 
