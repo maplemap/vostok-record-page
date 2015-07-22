@@ -82,12 +82,22 @@ var App = (function () {
 
         Render = {
 
-            header: function (content) {
+            header: function(content) {
                 $('#header').empty().html(content);
             },
 
-            main: function (content) {
+            content: function(content) {
                 $('#content').empty().html(content);
+            },
+
+            footer: function(content) {
+                $('#footer').empty().html(content);
+
+                Helper.initCreatedData();
+                Helper.initAuthorSign();
+            }
+
+        },
             }
 
         };
