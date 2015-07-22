@@ -16,9 +16,14 @@ var App = (function () {
             }
         },
 
-        template = {
-          header: true,
-          main: true
+        TMPdata = false,
+
+        Templates = {
+          header: false,
+          main: false,
+          about: false,
+          contacts: false,
+          footer: false
         },
 
         init = function () {
