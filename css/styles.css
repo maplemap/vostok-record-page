@@ -215,9 +215,9 @@ h2 {
       -o-transition: all .3s;
     transition: all .3s;
 }
-.name_page span {
-    margin-left: -.35em;
-}
+/*.name_page span {*/
+    /*margin-left: -.35em;*/
+/*}*/
 .social,
 .nav_block {
     position: absolute;
