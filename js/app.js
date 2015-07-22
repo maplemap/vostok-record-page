@@ -4,11 +4,15 @@ var App = (function () {
 
     var config = {
             path: {
-                templates: '/templates/'
+                templates: '/templates/',
+                templatesData: '/data/templates.json'
             },
             views: {
                 header: 'header.html.twig',
-                main: 'main.html.twig'
+                main: 'main.html.twig',
+                about: 'about.html.twig',
+                contacts: 'contacts.html.twig',
+                footer: 'footer.html.twig'
             }
         },
 
