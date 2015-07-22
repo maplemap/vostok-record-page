@@ -3,15 +3,9 @@
  */
 $(document).ready( function (){
 /*************************** Created-CurrentYearInFooter **********************************/
-    var createdYear = 2014;
-    var currentDate = new Date();
-    var currentYear = currentDate.getFullYear();
-    if (createdYear == currentYear) $('.copyright span').html(createdYear);
-    else
-        $('.copyright span').html(+createdYear + ' - ' + currentYear);
-/********************************** Author'sSignature *************************************/
-    $('.copyright span')
-        .after('<a href="//maplemap.net/" target="_blank" title="Design by MapleMap" class="author-signature">O</a>');
+
+/********************************** Author's Signature *************************************/
+
 /********************************** Hide-Show menu ****************************************/
     $('.icon-menu').on('click', function(){
         var $headerNav =  $('#header').find('.nav');
@@ -33,4 +27,34 @@ $(document).ready( function (){
             });
         }
     });
+
+/********************************* owlCarousel *******************************************/
+
 });
+
+var Helper = {
+
+    initOwlCarousel: function (element) {
+        $(element).owlCarousel({
+            items : 3,
+            itemsDesktop : [1199,3],
+            itemsDesktopSmall : [979,3]
+        });
+    },
+
+    initCreatedData: function () {
+        var createdYear = 2014,
+            currentYear = new Date().getFullYear(),
+            $copyRightSpan = $('.copyright span');
+
+        (createdYear == currentYear)?
+            $copyRightSpan.html(createdYear) : $copyRightSpan.html(+createdYear + ' - ' + currentYear);
+    },
+
+    initAuthorSign: function () {
+        $('.copyright span')
+            .after('<a href="//maplemap.net/" target="_blank" title="Design by MapleMap" class="author-signature">O</a>');
+    }
+
+
+};
