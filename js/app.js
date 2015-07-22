@@ -28,14 +28,28 @@ var App = (function () {
 
         init = function () {
 
-            CreateTemplate('header', function(content){
-                Render.header(content);
+            Get.TMPdata(function() {
+                Routing.init();
             });
 
-            CreateTemplate('main', function(content){
-                Render.main(content);
-            });
+        },
 
+        Create = {
+
+            twigTMP: function (tmpName, data, callback) {
+
+                Templates[tmpName] = twig({
+                    id: tmpName,
+                    href: config.path.templates + config.views[tmpName],
+                    async: false,
+
+                    load: function(template) {
+                        var content = template.render(data);
+
+                        callback(content);
+                    }
+                });
+            }
         },
 
         CreateTemplate = function (tpl, callback) {
