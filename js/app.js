@@ -98,6 +98,35 @@ var App = (function () {
             }
 
         },
+
+        Routing = {
+
+            init: function () {
+                routie({
+
+                    '': function() {
+                        Render.header( Get.twigContent('header') );
+                        Render.content( Get.twigContent('main') );
+                    },
+
+                    'about': function() {
+                        Render.header( Get.twigContent('header', TmpData.about));
+                        Render.content( Get.twigContent('about') );
+                        Render.footer( Get.twigContent('footer') );
+
+                        Helper.initOwlCarousel('#equipment, #room, #people');
+                    },
+
+                    'contacts': function() {
+                        Render.content( Get.twigContent('contacts') );
+                        Render.footer( Get.twigContent('footer') );
+                    }
+
+                });
+            },
+
+            content: function() {
+
             }
 
         };
