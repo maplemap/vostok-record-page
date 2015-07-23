@@ -255,12 +255,12 @@ h2 {
     display: inline-block;
     padding: .3em;
 }
-.social li:hover a  {
-      -webkit-transform: scale(1.8, 1.8);
-      -moz-transform: scale(1.8, 1.8);
-      -ms-transform: scale(1.8, 1.8);
-    transform: scale(1.8, 1.8);
-}
+/*.social li:hover a  {*/
+      /*-webkit-transform: scale(1.8, 1.8);*/
+      /*-moz-transform: scale(1.8, 1.8);*/
+      /*-ms-transform: scale(1.8, 1.8);*/
+    /*transform: scale(1.8, 1.8);*/
+/*}*/
 .social .icon-rus-vk-02:before { content:""; }
 .social .icon-twitter-1:before { content:""; }
 .social .icon-youtube:before { content:""; }
@@ -370,12 +370,12 @@ h2 {
       -o-transition: all .3s;
     transition: all .3s;
 }
-.tiny_nav li:hover {
-      -webkit-transform: translateY(-.2em) scale(1.2, 1.2);
-      -moz-transform: translateY(-.2em) scale(1.2, 1.2);
-      -ms-transform: translateY(-.2em) scale(1.2, 1.2);
-    transform: translateY(-.2em) scale(1.2, 1.2);
-}
+/*.tiny_nav li:hover {*/
+      /*-webkit-transform: translateY(-.2em) scale(1.2, 1.2);*/
+      /*-moz-transform: translateY(-.2em) scale(1.2, 1.2);*/
+      /*-ms-transform: translateY(-.2em) scale(1.2, 1.2);*/
+    /*transform: translateY(-.2em) scale(1.2, 1.2);*/
+/*}*/
 /*----------------------------------------------------------------------------------*/
 /*----------------------------------------CONTENT-----------------------------------*/
 /*----------------------------------------------------------------------------------*/
@@ -581,7 +581,7 @@ content: "\e035";
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------CONTACTS PAGE--------------------------------*/
 /*----------------------------------------------------------------------------------*/
-#contacts {
+.contacts {
     overflow: hidden;
 }
 .info dt {
@@ -593,7 +593,7 @@ content: "\e035";
     font-family: 'fontello';
 }
 .info .email:before {
-    content: '\e800';
+    content: '\e802';
 }
 .info .email,
 .info .email+dd {
@@ -606,7 +606,7 @@ content: "\e035";
     font-family: 'fontello';
 }
 .info .skype:before {
-    content: '\e801';
+    content: '\e800';
 }
 
 .google-maps {
@@ -756,7 +756,7 @@ content: "\e035";
         position: static;
     }
     .icon-menu {
-        display: none;
+        display: none !important;
     }
     .more:after {
         display: inline-block;
