@@ -301,16 +301,13 @@ h2 {
 .more:after,
 .more.up:after {
     position: absolute;
-    top: -.7em;
-    left: 0;
     width: 100%;
     height: 100%;
     display: none;
-    content: "\e802";
+    content: "\e803";
     font-family: fontello;
-    font-size: 1.5em;
+    font-size: .8em;
     cursor: pointer;
-    margin: 0 0 0 .4em;
       -webkit-transition: color .2s;
       -moz-transition: color .2s;
       -ms-transition: color .2s;
@@ -318,12 +315,19 @@ h2 {
     transition: color .2s;
 }
 .more:after {
-    color: #E00000;
+    top: .3em;
+    left: 1.4em;
+    color: rgba(224, 0, 0, 0.7);
+      -moz-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+    transform: rotate(180deg);
 }
-.more.up:after {
-    display: block;
-    color: #a60000;
-}
+/*.more.up:after {*/
+    /*display: block;*/
+    /*color: #a60000;*/
+/*}*/
 .nav {
     font-size: 1.1em;
       -webkit-transition: all .5s;
