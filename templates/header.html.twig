@@ -8,7 +8,11 @@
     <li><a title="Youtube" class="icon-youtube" href="#"></a></li>
 </ul>
 <ul class="tiny_nav">
-    <li><a href="#about">О Нас</a></li>
-    <li><a href="#contacts">Контакты</a></li>
+    <li><a class="nav-about" href="#about">О Нас</a></li>
+    <li><a class="nav-contacts" href="#contacts">Контакты</a>
+        {% if template != 'main' %}
+            <span class="more"></span>
+        {% endif %}
+    </li>
 </ul>
 <h1 class="name_page">{{ namePage }}</h1>
