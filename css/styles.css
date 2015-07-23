@@ -257,14 +257,24 @@ h2 {
 /*---------------------------------------NAV----------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 .icon-menu {
+    display: none;
     float: right;
-    color: #E00000;
+    color: rgba(224, 0, 0, 0.7);
     font-family: 'fontello';
-    font-size:4em;
+    font-size: 3em;
     cursor: pointer;
+      -webkit-transition: all .3s;
+      -moz-transition: all .3s;
+      -ms-transition: all .3s;
+      -o-transition: all .3s;
+    transition: all .3s;
+}
+.icon-menu.active {
+    display: block;
 }
 .icon-menu:before {
-    content: "\e802";
+    content: "\e801";
+    font-weight: normal;
 }
 #header .nav {
     float: right;
