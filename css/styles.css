@@ -130,6 +130,10 @@ a {
 }
 a:hover {
     color: #E00000;
+    outline: 0;
+}
+a:hover, a:active, a:focus {
+    outline: 0;
 }
 body {
     color: #fff;
