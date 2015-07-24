@@ -263,10 +263,3 @@
     };
 
 })(jQuery, window, document);
-
-/*Initialization player*/
-$(function(){
-    $("#ubaplayer").ubaPlayer({
-        codecs: [{name:"MP3", codec: 'audio/mpeg;'}]
-    });
-});
