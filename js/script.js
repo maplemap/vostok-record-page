@@ -1,37 +1,6 @@
 /**
  * Created by MapleMap on 27.05.14.
  */
-$(document).ready( function (){
-/*************************** Created-CurrentYearInFooter **********************************/
-
-/********************************** Author's Signature *************************************/
-
-/********************************** Hide-Show menu ****************************************/
-    $('.icon-menu').on('click', function(){
-        var $headerNav =  $('#header').find('.nav');
-
-       if(!(parseInt($headerNav.css('width')))){
-           $headerNav.addClass('active');
-       } else {
-           $headerNav.removeClass('active');
-       }
-    });
-/************************ Hide-Show Menu after width: 56.25em ****************************/
-    $(".more").click(function () {
-        var width_brows_px = $("html").width();
-        var font_size = parseInt($('html').css('font-size'));
-        var width_brows_em = width_brows_px/font_size;
-        if (width_brows_em <= 56.25) {
-            $(".header .nav").slideToggle("fast", function(){
-                $('.more').toggleClass('up');
-            });
-        }
-    });
-
-/********************************* owlCarousel *******************************************/
-
-});
-
 var Helper = {
 
     initOwlCarousel: function (element) {
@@ -53,8 +22,34 @@ var Helper = {
 
     initAuthorSign: function () {
         $('.copyright span')
-            .after('<a href="//maplemap.net/" target="_blank" title="Design by MapleMap" class="author-signature">O</a>');
-    }
+            .after('<a href="//maplemap.net/" target="_blank" title="Design & Develop - MapleMap" class="author-signature">O</a>');
+    },
 
+    initMainMenu: function () {
+        var $headerNav =  $('#header').find('.nav');
+
+        Helper.setActiveClass('.icon-menu');
+        $('.icon-menu')
+            .on('click', function(){
+                $(this).toggleClass('rotate-180');
+                $headerNav.toggleClass('active');
+        });
+    },
+
+    initUbaPlayer: function () {
+        $("#ubaplayer").ubaPlayer({
+            codecs: [{name:"MP3", codec: 'audio/mpeg;'}]
+        });
+    },
+
+    initMobileBtnMenu: function () {
+        $(".more").click(function () {
+            $('#header').find('.nav').slideToggle("fast");
+        });
+    },
+
+    setActiveClass: function (element) {
+        $(element).addClass('active');
+    }
 
 };
