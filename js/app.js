@@ -41,7 +41,7 @@ var App = (function () {
         init = function () {
 
             Get.TMPdata(function() {
-                Routing.init();
+                initRouting();
             });
 
         },
