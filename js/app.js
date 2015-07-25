@@ -94,15 +94,30 @@ var App = (function () {
 
         Render = {
 
-            header: function(content) {
+            header: function(data) {
+                var content = Get.twigContent('header', data);
+
                 $('#header').empty().html(content);
             },
 
-            content: function(content) {
+            content: function(tmpName, data) {
+                var content = Get.twigContent(tmpName, data);
+
+                Render.header(TMPdata[tmpName]);
+
                 $('#content').empty().html(content);
+
+                if(tmpName != 'main') {
+                    Render.footer();
+                    Helper.initMainMenu();
+                    Helper.setActiveClass('.nav-' + tmpName);
+                    Helper.initMobileBtnMenu()
+                }
             },
 
-            footer: function(content) {
+            footer: function(data) {
+                var content = Get.twigContent('footer', data);
+
                 $('#footer').empty().html(content);
 
                 Helper.initCreatedData();
