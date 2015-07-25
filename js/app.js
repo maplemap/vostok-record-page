@@ -111,36 +111,61 @@ var App = (function () {
 
         },
 
-        Routing = {
+        initRouting = function () {
+            routie({
 
-            init: function () {
-                routie({
+                '': function() {
+                    Render.header();
+                    Render.content('main');
+                },
 
-                    '': function() {
-                        Render.header( Get.twigContent('header') );
-                        Render.content( Get.twigContent('main') );
-                    },
+                'about': function() {
+                    Render.content('about');
 
-                    'about': function() {
-                        Render.header( Get.twigContent('header', TmpData.about));
-                        Render.content( Get.twigContent('about') );
-                        Render.footer( Get.twigContent('footer') );
+                    Helper.initOwlCarousel('#equipment, #room, #people');
+                },
 
-                        Helper.initOwlCarousel('#equipment, #room, #people');
-                    },
+                'contacts': function() {
+                    Render.content('contacts');
+                },
 
-                    'contacts': function() {
-                        Render.content( Get.twigContent('contacts') );
-                        Render.footer( Get.twigContent('footer') );
-                    }
+                'audioClips': function() {
+                    Render.content('audioClips');
 
-                });
-            },
+                    Helper.initUbaPlayer();
+                },
 
-            content: function() {
+                'production': function() {
+                    Render.content('production');
 
-            }
+                    Helper.initUbaPlayer();
+                },
 
+                'instrumental': function() {
+                    Render.content('instrumental');
+
+                    Helper.initUbaPlayer();
+                },
+
+                'speaker': function() {
+                    Render.content('speaker');
+
+                    Helper.initUbaPlayer();
+                },
+
+                'voiceVideo': function() {
+                    Render.content('voiceVideo');
+
+                    Helper.initUbaPlayer();
+                },
+
+                'answerPhone': function() {
+                    Render.content('answerPhone');
+
+                    Helper.initUbaPlayer();
+                }
+
+            });
         };
 
 
