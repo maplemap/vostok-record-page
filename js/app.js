@@ -12,6 +12,12 @@ var App = (function () {
                 main: 'main.html.twig',
                 about: 'about.html.twig',
                 contacts: 'contacts.html.twig',
+                audioClips: 'audio_clips.html.twig',
+                production: 'production.html.twig',
+                instrumental: 'instrumental.html.twig',
+                speaker: 'speaker.html.twig',
+                voiceVideo: 'voice_video.html.twig',
+                answerPhone: 'answer_phone.html.twig',
                 footer: 'footer.html.twig'
             }
         },
@@ -23,6 +29,12 @@ var App = (function () {
           main: false,
           about: false,
           contacts: false,
+          audioClips: false,
+          production: false,
+          instrumental: false,
+          speaker: false,
+          voiceVideo: false,
+          answerPhone: false,
           footer: false
         },
 
