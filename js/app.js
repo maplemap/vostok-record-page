@@ -74,20 +74,19 @@ var App = (function () {
                 });
             },
 
-            twigContent: function (template, data) {
-                var data = data || TmpData[tmpName],
-                    twigTemplate = twig({ ref: template }),
-                    view = '';
+            twigContent: function (tmpName, data) {
+                var twigTemplate = twig({ ref: tmpName }), content = '';
+                data = data || TMPdata[tmpName];
 
                 if( twigTemplate ) {
-                    view = twigTemplate.render(data);
+                    content = twigTemplate.render(data);
                 } else {
-                    Create.twigTMP(template, data, function(content){
-                        view = content;
+                    Create.twigTMP(tmpName, data, function(tmpContent){
+                        content = tmpContent;
                     });
                 }
 
-                return view;
+                return content;
             }
 
         },
