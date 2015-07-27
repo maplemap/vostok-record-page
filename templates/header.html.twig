@@ -1,0 +1,22 @@
+<a class="logo" href="/">
+    <span>ВостокЗапись - студия звукозаписи</span>
+    <img alt="VostokRecords" src="/img/logo.png">
+</a>
+<ul class="social">
+    <li><a title="Вконтакте" class="icon-rus-vk-02" href="#"></a></li>
+    <li><a title="Twitter" class="icon-twitter-1" href="#"></a></li>
+    <li><a title="Youtube" class="icon-youtube" href="#"></a></li>
+</ul>
+<ul class="tiny_nav">
+    <li><a class="nav-about" href="#about">О Нас</a></li>
+    <li><a class="nav-contacts" href="#contacts">Контакты</a>
+        {% if template != 'main' %}
+            <span class="more"></span>
+        {% endif %}
+    </li>
+</ul>
+<div class="nav_block">
+    <div class="icon-menu"></div>
+    {% include 'main_nav.html.twig' %}
+</div>
+<h1 class="name_page">{{ namePage }}</h1>

@@ -1,0 +1,38 @@
+{
+  "main": {
+    "template": "main",
+    "namePage": "СтудияЗвукозаписи"
+  },
+  "about": {
+    "template": "about",
+    "namePage": "О нас"
+  },
+  "contacts": {
+    "template": "contacts",
+    "namePage": "Контакты"
+  },
+  "audioClips": {
+    "template": "audioClips",
+    "namePage": "Аудиоролики"
+  },
+  "production": {
+    "template": "production",
+    "namePage": "Продакшн"
+  },
+  "instrumental": {
+    "template": "instrumental",
+    "namePage": "Минусовки"
+  },
+  "speaker": {
+    "template": "speaker",
+    "namePage": "Дикторы"
+  },
+  "voiceVideo": {
+    "template": "voiceVideo",
+    "namePage": "ОзвучкаВидео"
+  },
+  "answerPhone": {
+    "template": "answerPhone",
+    "namePage": "Дикторы"
+  }
+}
