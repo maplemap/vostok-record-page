@@ -111,13 +111,21 @@ var App = (function () {
                     Helper.initMainMenu();
                     Helper.setActiveClass('.nav-' + tmpName);
                     Helper.initMobileBtnMenu()
+                } else {
+                    Render.footer('clear');
                 }
             },
 
             footer: function(data) {
+                var $footer = $('#footer');
+                if(data == 'clear') {
+                    $footer.empty();
+                    return;
+                }
+
                 var content = Get.twigContent('footer', data);
 
-                $('#footer').empty().html(content);
+                $footer.empty().html(content);
 
                 Helper.initCreatedData();
                 Helper.initAuthorSign();
