@@ -4,8 +4,8 @@ var App = (function () {
 
     var config = {
             path: {
-                templates: '/templates/',
-                templatesData: '/data/templates.json'
+                templates: 'templates/',
+                templatesData: 'data/templates.json'
             },
             views: {
                 header: 'header.html.twig',
@@ -41,7 +41,6 @@ var App = (function () {
         init = function () {
 
             Get.TMPdata(function() {
-                console.log(TMPdata);
                 initRouting();
             });
 
@@ -138,7 +137,6 @@ var App = (function () {
             routie({
 
                 '': function() {
-                    console.log('');
                     Render.header();
                     Render.content('main');
                 },
