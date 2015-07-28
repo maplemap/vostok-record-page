@@ -40,6 +40,7 @@ var App = (function () {
 
         init = function () {
 
+            console.log('init');
             Get.TMPdata(function() {
                 initRouting();
             });
