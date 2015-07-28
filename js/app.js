@@ -4,8 +4,8 @@ var App = (function () {
 
     var config = {
             path: {
-                templates: 'templates/',
-                templatesData: 'data/templates.json'
+                templates: './templates/',
+                templatesData: './data/templates.json'
             },
             views: {
                 header: 'header.html.twig',
