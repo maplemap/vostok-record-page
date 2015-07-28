@@ -40,8 +40,8 @@ var App = (function () {
 
         init = function () {
 
-            console.log('init');
             Get.TMPdata(function() {
+                console.log(TMPdata);
                 initRouting();
             });
 
@@ -138,6 +138,7 @@ var App = (function () {
             routie({
 
                 '': function() {
+                    console.log('');
                     Render.header();
                     Render.content('main');
                 },
