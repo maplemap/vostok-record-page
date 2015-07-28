@@ -26,14 +26,21 @@ var Helper = {
     },
 
     initMainMenu: function () {
-        var $headerNav =  $('#header').find('.nav');
+        var $headerNav =  $('#header').find('.nav'),
+            $iconMenu = $('.icon-menu');
 
         Helper.setActiveClass('.icon-menu');
-        $('.icon-menu')
+
+        $iconMenu
             .on('click', function(){
                 $(this).toggleClass('rotate-180');
                 $headerNav.toggleClass('active');
-        });
+                Cookies.set('main_menu', $headerNav.hasClass('active'));
+            });
+
+        if(Cookies.get('main_menu') == 'true') {
+            $iconMenu.trigger('click');
+        }
     },
 
     initUbaPlayer: function () {
