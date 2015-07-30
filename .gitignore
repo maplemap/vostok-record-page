@@ -9,3 +9,5 @@ sites/*/private
 /.idea
 /_drupal
 *~
+
+params.json

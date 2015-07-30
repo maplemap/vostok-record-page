@@ -39,6 +39,7 @@ var Helper = {
                 Cookies.set('main_menu', $headerNav.hasClass('active'));
             });
 
+
         if(Cookies.get('main_menu') == 'true') {
             $iconMenu.trigger('click');
         }
