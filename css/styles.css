@@ -808,10 +808,10 @@ content: "\e035";
         font-size: 1.9em;
     }
     #header {
-        padding-top: 1em;
+        padding-top: 0;
     }
     .main_menu a {
-        padding: 2em 0;
+        padding: 2.5em 0 4.5em 0;
     }
 }
 @media screen and (max-width: 21.875em) {/*350px*/
