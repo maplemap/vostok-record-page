@@ -777,6 +777,12 @@ content: "\e035";
         transform: none;
     }
 }
+@media screen and (max-width: 62.5em) {/*1000px*/
+    .video {
+        width: 90%;
+        padding-bottom: 51.25%;
+    }
+}
 @media screen and (max-width: 48.125em) {/*770px*/
     .container {
         width: 100%;
