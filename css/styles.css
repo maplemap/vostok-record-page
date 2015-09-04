@@ -800,9 +800,18 @@ content: "\e035";
         width: 100%;
     }
 }
-@media screen and (max-width: 26.5625em) {/*450px*/
+@media screen and (max-width: 26.5625em) {/*425px*/
     .name_page span {
         margin-left: 0;
+    }
+    h1 {
+        font-size: 1.9em;
+    }
+    #header {
+        padding-top: 1em;
+    }
+    .main_menu a {
+        padding: 2em 0;
     }
 }
 @media screen and (max-width: 21.875em) {/*350px*/
