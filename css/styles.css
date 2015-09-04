@@ -794,6 +794,9 @@ content: "\e035";
         display: inline-block;
         width: 80%;
     }
+    .article header {
+        margin-left: 0;
+    }
 }
 @media screen and (max-width: 28.125em) {/*450px*/
     .main_menu li {
